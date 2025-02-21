@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Tip Jar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/4.0.3/web3.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>💰 Crypto Tip Jar</h1>
+        <p><strong>Contract Balance:</strong> <span id="balance">0</span> ETH</p>
+        <p><strong>ERC-20 Balance:</strong> <span id="erc20Balance">0</span> Tokens</p>
+
+        <input type="text" id="amount" placeholder="Enter amount (ETH)">
+        <button onclick="sendTip()">💸 Send Tip</button>
+
+        <input type="text" id="erc20Amount" placeholder="Enter ERC-20 Amount">
+        <button onclick="sendERC20Tip()">💰 Send ERC-20 Tip</button>
+
+        <button class="withdraw-btn" onclick="withdrawFunds()">🔓 Withdraw ETH</button>
+        <button class="withdraw-btn" onclick="withdrawERC20()">🔓 Withdraw ERC-20</button>
+
+        <h2>📝 Donor List</h2>
+        <ul id="donors"></ul>
+
+        <p id="status"></p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
